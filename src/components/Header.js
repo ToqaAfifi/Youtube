@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import classes from './Header.module.scss';
+import SearchBar from './SearchBar';
 
 const Header = () => {
 
@@ -34,6 +35,7 @@ const Header = () => {
                 layout === 'desktop' ?
                     <img src={`${process.env.PUBLIC_URL}/images/youtubeLogo.svg`} alt="logo" className={classes.logo} /> : <img src={`${process.env.PUBLIC_URL}/images/youtubeMinLogo.svg`} alt="logo" className={classes.logo} />
             }
+            <SearchBar />
         </header>
     )
 }
