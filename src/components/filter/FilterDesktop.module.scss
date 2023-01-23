@@ -1,0 +1,27 @@
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: gray;
+    font-weight: 500;
+
+    button {
+        background-color: #f9f9f9;
+        padding: 0px 20px;
+        font-size: 18px;
+        color: gray;
+        border: 0;
+
+        &:hover, &:active {
+          background-color: #e7e7e7;
+        }
+        &:disabled,
+        &:disabled:hover,
+        &:disabled:active {
+          background-color: #ccc;
+          color: rgb(104, 103, 103);
+          cursor: not-allowed;
+        }
+    }
+}

@@ -1,33 +1,7 @@
-import { useEffect, useState } from 'react';
-import classes from './Header.module.scss';
 import SearchBar from './SearchBar';
+import classes from './Header.module.scss';
 
-const Header = () => {
-
-    const [layout, setLayout] = useState('desktop');
-
-    useEffect(() => {
-
-        window.addEventListener("resize", () => {
-            if (window.innerWidth <= 600) {
-                setLayout("mobile");
-            }
-            else {
-                setLayout("desktop");
-            }
-        });
-
-        return () => {
-            window.removeEventListener("resize", () => {
-                if (window.innerWidth <= 600) {
-                    setLayout("mobile");
-                }
-                else {
-                    setLayout("desktop");
-                }
-            });
-        };
-    }, [])
+const Header = ({ layout }) => {
 
     return (
         <header>
