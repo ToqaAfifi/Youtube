@@ -1,0 +1,38 @@
+@media (max-width: 600px) {
+    header {
+        padding: 0;
+        position: sticky;
+        top: 0;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+
+        .logo {
+            width: 4em;
+            padding: 0 0 0 2%;
+        }
+    } 
+}
+
+@media (min-width: 601px) {
+    header {
+        padding: 0;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1vw 15vw;
+
+        .logo {
+            width: 10em;
+        }
+    } 
+}
+
+
+
+
