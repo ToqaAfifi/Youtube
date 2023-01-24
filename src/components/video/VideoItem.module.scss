@@ -4,13 +4,13 @@
     margin: 0;
 }
 
-.videoDetails {
-    display: table-cell;
-    width: 68%;
-    vertical-align: middle;
-    overflow: hidden;
-    word-break: break-all;
-    text-align: left;
-    height: 11rem;
-    margin: 0 2%;
+@media (max-width: 600px) {
+    img {
+        width: 55%
+    }
+}
+
+.channel {
+    border-radius: 6rem;
+    width: auto;
 }

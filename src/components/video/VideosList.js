@@ -5,7 +5,8 @@ import classes from './VideosList.module.scss';
 const VideosList = () => {
 
     const { data, error } = useSelector(state => state.videos);
-
+    console.log(data.videosList);
+    
     if (error) {
         return <div className={classes.error}>
             <h3>{error.name}</h3>
@@ -13,11 +14,11 @@ const VideosList = () => {
         </div>
     }
 
-    if(data.videosList.length === 0){
+    if (data.videosList.length === 0) {
         return <p>Type in a search term</p>
     }
 
-    return data.videosList.map(video => <VideoItem key={video.id} {...video}/>)
+    return data.videosList.map(video => <VideoItem key={video.id} video={video} />)
 }
 
 export default VideosList;

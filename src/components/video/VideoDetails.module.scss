@@ -1,0 +1,16 @@
+.details {
+    display: table-cell;
+    width: 68%;
+    vertical-align: middle;
+    overflow: hidden;
+    word-break: break-all;
+    text-align: left;
+    height: 11rem;
+    margin: 0 2%;
+}
+
+.videoStats {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
