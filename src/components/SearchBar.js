@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch } from "react-redux";
+import { fetchVideos } from "../store/thunks/fetchVideos";
 import Button from './ui/Button';
 import { GoSearch } from 'react-icons/go';
 import classes from './SearchBar.module.scss';
@@ -6,6 +8,8 @@ import classes from './SearchBar.module.scss';
 const SearchBar = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
+    const dispatch = useDispatch();
+    // const { isLoading } = useSelector(state => state.videos);
 
     const searchHandler = (e) => {
         
@@ -13,6 +17,8 @@ const SearchBar = () => {
         if (!searchTerm) {
             return;
         }
+
+        dispatch(fetchVideos(searchTerm))
     }
 
     return (
