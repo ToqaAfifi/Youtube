@@ -15,7 +15,7 @@ const VideoDetails = ({ channelTitle, description, liveBroadcastContent, publish
             </>
             :
             <>
-                <h3>{liveBroadcastContent !== "none" && <span>🔴</span>} {title}</h3>
+                <h3 style={{marginBottom: "4px"}}>{liveBroadcastContent !== "none" && <span>🔴</span>} {title}</h3>
                 <span>{channelTitle} • {formatPublishTime(publishTime)}</span>
                 <p>{liveBroadcastContent !== "none" && <span>🔴LIVE:</span>}{description}</p>
             </>
@@ -23,13 +23,12 @@ const VideoDetails = ({ channelTitle, description, liveBroadcastContent, publish
     </>
 
     if (layout === "mobile") {
-
         content = <>
             {kind === "youtube#channel" ?
                 <h3>{channelTitle}</h3>
                 :
                 <>
-                    <h4 style={{ marginBottom: '0.6rem' }}>{liveBroadcastContent !== "none" && <span>🔴</span>} {title.slice(0, 50)}</h4>
+                    <h4>{liveBroadcastContent !== "none" && <span>🔴</span>} {title.slice(0, 50)}</h4>
                     <span>{channelTitle}</span>
                 </>
             }

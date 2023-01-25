@@ -30,7 +30,13 @@
         .logo {
             width: 10em;
         }
-    } 
+    }
+    
+    .loadingBar {
+        background-color: red; 
+        height: 3px; 
+        position: inherit;
+    }
 }
 
 

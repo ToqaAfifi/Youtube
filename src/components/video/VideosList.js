@@ -5,7 +5,6 @@ import classes from './VideosList.module.scss';
 const VideosList = () => {
 
     const { data, error } = useSelector(state => state.videos);
-    console.log(data.videosList);
     
     if (error) {
         return <div className={classes.error}>
